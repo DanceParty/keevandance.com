@@ -120,7 +120,7 @@ export default function Home() {
             </li>
             <li className="font-light text-sm text-gray-600 mb-1">
               🎵 Attend concerts for indie bands in Korea; My favorite band
-              I&apos;ve seen so far is 카라라!
+              I&apos;ve seen so far is 키라라!
             </li>
             <li className="font-light text-sm text-gray-600">
               ☕ Spending good-weather days wondering random neighborhoods of
