@@ -137,7 +137,7 @@ export default function Home() {
             href="https://github.com/DanceParty/personal-website"
             target="_blank"
             className="font-light underline text-gray-600 hover:text-gray-950 transition"
-            aria-label="Click to visit the repository for this website"
+            aria-label="Click to visit the GitHub repository for this website"
           >
             GitHub
           </Link>
