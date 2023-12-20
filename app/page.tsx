@@ -6,14 +6,14 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="flex flex-col min-h-screen items-start px-56">
-      <div className="flex flex-col items-start min-h-screen w-full">
+      <section className="flex flex-col items-start min-h-screen w-full">
         <div className="pt-64">
           <h1 className="font-medium text-4xl text-gray-800 mb-2">
             Keevan Dance
           </h1>
-          <p className={`${garamound.className} text-xl text-gray-500 mb-3`}>
+          <h2 className={`${garamound.className} text-xl text-gray-500 mb-3`}>
             🇰🇷 Seoul-based software engineer looking for their next oppurtunity.
-          </p>
+          </h2>
           <p className="font-normal text-sm text-gray-800 max-w-lg mb-2">
             I&apos;ve spent 8+ years building consumer-facing products between
             Phoenix, Chicago, Seattle, and now Seoul.
@@ -31,8 +31,8 @@ export default function Home() {
             <Icon.Email />
           </div>
         </div>
-      </div>
-      <div className="pt-12 w-full pb-36">
+      </section>
+      <section className="pt-12 w-full pb-36">
         <List>
           <ListItem
             date="2020-2023"
@@ -40,21 +40,23 @@ export default function Home() {
             alt="GitHub logo"
             jobTitle={() => (
               <>
-                <span className="text-gray-600 text-sm font-semibold tracking-wide">
+                <span className="text-gray-600 text-sm font-light">
                   <Link
                     href="https://github.com/features/actions"
                     target="_blank"
-                    className="text-gray-400 hover:text-sky-700 transition"
+                    className="font-light underline text-gray-600 hover:text-sky-700 transition"
+                    aria-label="Click to visit the GitHub Actions homepage"
                   >
                     Actions
                   </Link>{" "}
                   &#8212; Software Engineer III
                 </span>
-                <span className="text-gray-600 text-sm font-semibold tracking-wide">
+                <span className="text-gray-600 text-sm font-light">
                   <Link
                     href="https://docs.github.com/en/billing"
                     target="_blank"
-                    className="text-gray-400 hover:text-emerald-700 transition"
+                    className="font-light underline text-gray-600 hover:text-emerald-700 transition"
+                    aria-label="Click to visit the GitHub Billing documentation page"
                   >
                     Billing
                   </Link>{" "}
@@ -68,11 +70,12 @@ export default function Home() {
             logo="/Microsoft.png"
             alt="Microsoft logo"
             jobTitle={() => (
-              <span className="text-gray-600 text-sm font-semibold tracking-wide">
+              <span className="text-gray-600 text-sm font-light">
                 <Link
                   href="https://appcenter.ms"
                   target="_blank"
-                  className="text-gray-400 hover:text-pink-700 transition"
+                  className="font-light underline text-gray-600 hover:text-pink-700 transition"
+                  aria-label="Click to visit the App Center homepage"
                 >
                   App Center
                 </Link>{" "}
@@ -85,11 +88,12 @@ export default function Home() {
             logo="/Allstate.png"
             alt="Allstate logo"
             jobTitle={() => (
-              <span className="text-gray-600 text-sm font-semibold tracking-wide">
+              <span className="text-gray-600 text-sm font-light">
                 <Link
                   href="https://www.allstate.com/landingpages/virtual-assist.htm"
                   target="_blank"
-                  className="text-gray-400 hover:text-indigo-700 transition"
+                  className="font-light underline text-gray-600 hover:text-indigo-700 transition"
+                  aria-label="Click to visit the Allstate Virtual Assist homepage"
                 >
                   Allstate
                 </Link>{" "}
@@ -98,12 +102,12 @@ export default function Home() {
             )}
           />
         </List>
-      </div>
-      <div className="flex flex-col items-start w-full pb-48">
+      </section>
+      <section className="flex flex-col items-start w-full pb-48">
         <div className="pt-36">
-          <h5 className="font-light text-md text-gray-800 mb-2">
+          <h2 className="font-light text-md text-gray-800 mb-2">
             Aside from working, things I enjoy include...
-          </h5>
+          </h2>
           <ul>
             <li className="font-light text-sm text-gray-600 mb-1">
               💰 Working on a side-project called Banktree (personal-finance
@@ -122,8 +126,8 @@ export default function Home() {
             </li>
           </ul>
         </div>
-      </div>
-      <div className="flex justify-center w-full pb-2">
+      </section>
+      <footer className="flex justify-center w-full pb-2">
         <span className="text-sm font-light text-gray-600 text-center">
           Made with ❤️ by Keevan. <br />
           Check out the code for this side on{" "}
@@ -131,12 +135,13 @@ export default function Home() {
             href="https://github.com/DanceParty/personal-website"
             target="_blank"
             className="text-gray-400 hover:text-gray-800 transition"
+            aria-label="Click to visit the repository for this website"
           >
             GitHub
           </Link>
           .
         </span>
-      </div>
+      </footer>
     </main>
   );
 }

@@ -18,7 +18,7 @@ export function ListItem({ ...props }: ListItemProps) {
   return (
     <li className={`flex gap-8 justify-between`}>
       <div className="flex flex-1 flex-col justify-center gap-4">
-        <span className="text-gray-400 text-sm font-light tracking-wider">
+        <span className="text-gray-600 text-sm font-light tracking-wider">
           {props.date}
         </span>
         <div className="flex flex-col">{props.jobTitle()}</div>
