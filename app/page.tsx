@@ -11,8 +11,10 @@ export default function Home() {
           <h1 className="font-medium text-4xl text-gray-800 mb-2">
             Keevan Dance
           </h1>
-          <h2 className={`${garamound.className} text-xl text-gray-500 mb-3`}>
-            🇰🇷 Seoul-based software engineer looking for their next oppurtunity.
+          <h2
+            className={`${garamound.className} text-xl font-medium text-[#0047A0] mb-3`}
+          >
+            Seoul-based software engineer looking for their next oppurtunity.
           </h2>
           <p className="font-normal text-sm text-gray-800 max-w-lg mb-2">
             I&apos;ve spent 8+ years building consumer-facing products between
@@ -134,7 +136,7 @@ export default function Home() {
           <Link
             href="https://github.com/DanceParty/personal-website"
             target="_blank"
-            className="text-gray-400 hover:text-gray-800 transition"
+            className="font-light underline text-gray-600 hover:text-gray-950 transition"
             aria-label="Click to visit the repository for this website"
           >
             GitHub
