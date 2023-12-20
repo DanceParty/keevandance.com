@@ -129,6 +129,7 @@ export default function Home() {
           Check out the code for this side on{" "}
           <Link
             href="https://github.com/DanceParty/personal-website"
+            target="_blank"
             className="text-gray-400 hover:text-gray-800 transition"
           >
             GitHub
