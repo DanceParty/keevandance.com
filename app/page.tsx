@@ -15,13 +15,13 @@ export default function Home() {
             🇰🇷 Seoul-based software engineer looking for their next oppurtunity.
           </p>
           <p className="font-normal text-sm text-gray-800 max-w-lg mb-2">
-            I've spent 8+ years building consumer-facing products between
+            I&apos;ve spent 8+ years building consumer-facing products between
             Phoenix, Chicago, Seattle, and now Seoul.
           </p>
           <p className="font-normal text-sm text-gray-800 max-w-lg mb-4">
-            My work has spanned from accessibility on Microsoft's App Center, to
-            backend usage-based billing systems at Github, to front-ends for
-            streaming apps at Allstate.
+            My work has spanned from accessibility on Microsoft&apos;s App
+            Center, to backend usage-based billing systems at Github, to
+            front-ends for streaming apps at Allstate.
           </p>
           <div className="flex flex-row gap-4 justify-start items-center">
             <Icon.Instagram />
@@ -113,8 +113,8 @@ export default function Home() {
               ⚽ Playing in a soccer league every Saturday; I play left-wing!
             </li>
             <li className="font-light text-sm text-gray-600 mb-1">
-              🎵 Attend concerts for indie bands in Korea; My favorite band I've
-              seen so far is 카라라!
+              🎵 Attend concerts for indie bands in Korea; My favorite band
+              I&apos;ve seen so far is 카라라!
             </li>
             <li className="font-light text-sm text-gray-600">
               ☕ Spending good-weather days wondering random neighborhoods of
