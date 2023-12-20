@@ -24,7 +24,7 @@ export function ListItem({ ...props }: ListItemProps) {
         <div className="flex flex-col">{props.jobTitle()}</div>
       </div>
       <div className="flex w-96 justify-center items-center">
-        <img src={props.logo} alt={props.alt} />
+        <Image src={props.logo} alt={props.alt} />
       </div>
     </li>
   );
