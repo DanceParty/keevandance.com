@@ -16,15 +16,17 @@ interface ListItemProps extends React.LiHTMLAttributes<HTMLLIElement> {
 
 export function ListItem({ ...props }: ListItemProps) {
   return (
-    <li className={`flex gap-8 justify-between`}>
-      <div className="flex flex-1 flex-col justify-center gap-4">
+    <li className="flex flex-col-reverse items-center w-full lg:flex-row lg:items-start gap-8 justify-between">
+      <div className="flex flex-1 flex-col justify-center gap-4 items-center lg:items-start">
         <span className="text-gray-600 text-sm font-light tracking-wider">
           {props.date}
         </span>
-        <div className="flex flex-col">{props.jobTitle()}</div>
+        <div className="flex flex-col items-center lg:items-start">
+          {props.jobTitle()}
+        </div>
       </div>
       <div className="flex w-96 justify-center items-center">
-        <Image src={props.logo} alt={props.alt} />
+        <Image src={props.logo} alt={props.alt} width={250} height={90} />
       </div>
     </li>
   );
