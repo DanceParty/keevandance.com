@@ -132,7 +132,7 @@ export default function Home() {
       <footer className="flex justify-center w-full pb-2">
         <span className="text-sm font-light text-gray-600 text-center">
           Made with ❤️ by Keevan. <br />
-          Check out the code for this side on{" "}
+          Check out the code for this site on{" "}
           <Link
             href="https://github.com/DanceParty/personal-website"
             target="_blank"
