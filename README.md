@@ -2,6 +2,6 @@
 
 #### Stack
 
-- Next.js
+- Astro
 - TypeScript
 - Deployed on Vercel

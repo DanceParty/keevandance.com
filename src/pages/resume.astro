@@ -1,0 +1,68 @@
+---
+import "../styles/global.css";
+const description = "Resume listing the career history of Keevan Dance."
+const title = "Keevan Dance - Resume"
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+		<link rel="icon" href="/favicon.svg" />
+		<meta name="description" content={description} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<title>{title}</title>
+		<meta name="theme-color" content="#000000" />
+	</head>
+	<body class="h-full w-full">
+    <div class="px-4 py-4"><a href="/">&#8592; back</a></div>
+		<main class="flex h-full flex-col px-4 lg:px-0 gap-8 max-w-2xl mx-auto py-4 lg:py-12">
+      <section>
+        <h1 class="text-center">Keevan Dance</h1>
+        
+        <ul class="flex flex-col md:flex-row gap-2 md:gap-4 items-center justify-center mb-2">
+          <li>Software Engineer</li>
+          <li>Seoul, South Korea</li>
+        </ul>
+        
+        <ul class="flex gap-4 justify-center">
+          <li class="text-sm"><a href="mailto:keevandance+mysite@gmail.com">keevandance@gmail.com</a></li>
+          <li class="text-sm"><a href="https://keevandance.com">personal site</a></li>
+          <li class="text-sm"><a href="https://github.com/danceparty">github</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Work experience</h2>
+        
+        <h3>GitHub &#8226; Software Engineer III</h3>
+        <p>In 2020 I started at GitHub on the Billing team where I worked on a variety of things ranging from integration of Azure-Subscription-based billing, standardizing billing UI between various GitHub products, and working on the re-architecture of our pay-as-you-go (metered) billing platform.</p>
+        <p>In 2022 I moved to Korea and switched to the Actions Policy team where I worked a bit on reusable workflows and developed controls for enterprises to create organizational policies for their actions.</p>
+        
+        <h3>Microsoft &#8226; Software Engineer II</h3>
+        <p>I worked on Microsoft's App Center which is a Mobile-backend-as-a-Service platform for mobile developers to quickly integrate things like crash reporting, authentication, etc... On App Center, I worked on the Core-UX team overseeing the front-end infrastructure and general front-end best practices across the organization. While at App Center, I was also apart of the huge initiative to improve accessibility across the platform.</p>
+      
+        <h3>Allstate Insurance &#8226; Software Engineer</h3>
+        <p>At Allstate I worked in the Compozed organization developing products like Virtual Assist to help streamline the insurance-adjuster inspection process.</p>
+      </section>
+      <section>
+        <h2>Projects</h2>
+        
+        <h3><a href="https://banktree.app">Banktree</a></h3>
+        <p>I am currently building a personal-budgeting application to fill a void left by my previous budgeting tool, YNAB, that aims to provide automatic account-syncing for korean banking institutions while also providing a free tier for users who don't plan on setting up the automatic sync.</p>
+
+        <h3><a href="https://github.com/DanceParty/crossfit-throwdown-mobile">CrossFit Throwdown</a></h3>
+        <p>A mobile application built in React Native to host and manage the yearly CrossFit Throwdown tournament held by a local gym. This app tracks the leaderboard and allows data entry for the manager of the tournament.</p>
+
+        <h3><a href="https://github.com/DanceParty/FacebookKoreanBot">Korean Translation Bot</a></h3>
+        <p>
+          This was a project I had built for fun shortly out of college that was an attempt to learn how to build a simple chat bot. 
+          Interestingly, this project blew up due to Kpop blowing up around the world and Facebook Internet starting to expand to countries with limited access to internet.
+          Because of this, users were unable to access apps like Google Translate, so my Facebook bot almost acted as a proxy for users on Facebook's Free Internet platform to translate
+          things like song lyrics or letters to their favorite idols. Over the course of its existence, this bot processed over 5 million messages from ~400k users.
+        </p>
+      </section>
+		</main>
+	</body>
+</html>

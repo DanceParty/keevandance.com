@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Geist Sans";
+    src: url("/GeistVariableVF.woff2");
+  }
+  @font-face {
+    font-family: "Nanum Myeongjo", serif;
+    src: url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
+  }
+  html {
+    font-family: "Nanum Myeongjo", serif;
+    width: 100%;
+    background-image: linear-gradient(45deg, #383838, #000000);
+    background-size: cover;
+    color: white;
+  }
+  h1 {
+    font-family: "Geist Sans";
+    font-weight: 600;
+    font-size: 36px;
+  }
+  h2 {
+    font-weight: 500;
+    font-size: 24px;
+    background: -webkit-linear-gradient(45deg, #ffb4b4, #ff8b8b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  li {
+    font-size: 20px;
+    font-weight: 200;
+    color: #d7d7d7;
+  }
+  a:hover {
+    background: -webkit-linear-gradient(45deg, #ffb4b4, #ff8b8b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  p {
+    @apply pt-4;
+    font-family: "Geist Sans";
+    font-size: 16px;
+    font-weight: 200;
+    color: #d7d7d7;
+  }
+  h3 {
+    @apply pt-4;
+  }
+}
