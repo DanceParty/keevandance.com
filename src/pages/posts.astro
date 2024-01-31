@@ -1,0 +1,52 @@
+---
+import "../styles/post-layout.css";
+import { format } from "date-fns"
+const allPosts = await Astro.glob("./posts/*.md");
+const sortedPosts = allPosts.sort((a, b) =>  Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate))
+const description = "Keevan is a software engineer. Alum at Allstate, Microsoft, and GitHub."
+const title = "Keevan Dance - Software Engineer"
+---
+
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+		<link rel="icon" href="/favicon.svg" />
+		<meta name="description" content={description} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<title>{title}</title>
+		<meta name="theme-color" content="#000000" />
+	</head>
+	<body class="h-full w-full">
+    <nav class="px-4 py-4">
+      <a class="back" href="/">&#8592; home</a>
+    </nav>
+		<main class="m-auto max-w-2xl px-4 pt-24 pb-12">
+      <h1 class="text-center mb-12">Writings</h1>
+      <p class="text-center">I don't write too much these days, but here are some of my writings from the past (mostly ported from Medium).</p>
+      <div class="posts flex flex-col gap-4">
+        {sortedPosts.map(post => {
+          return (
+            <article class="group bg-slate-800 rounded-lg border-2 border-slate-800 hover:border-fuchsia-500 duration-200 transition ease-in-out">
+              <a class="no-underline hover:shadow-none flex flex-col py-12 px-4" href={post.url}>
+                <h2 class="mb-4 mt-0 text-white group-hover:text-fuchsia-500 transition duration-200 ease-in-out">{post.frontmatter.title}</h2>
+                <div class="flex flex-row gap-2 mb-6">
+                  {post.frontmatter.tags.map((tag: string) => {
+                    return (
+                      <div class="p-1 rounded-lg bg-slate-700 w-fit text-xs text-slate-300">{tag}</div>
+                    )
+                  })}  
+                </div>
+                <span class="text-slate-300 mb-4 text-sm">{format(post.frontmatter.pubDate, "LLLL dd, yyyy")}</span>
+                <p class="text-slate-100 text-md mb-0">{post.frontmatter.description}</p>
+              </a>
+            </article>
+          )
+        })}
+      </div>
+		</main>
+	</body>
+</html>
