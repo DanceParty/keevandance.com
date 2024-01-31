@@ -5,7 +5,6 @@ import GitHubIcon from "../components/GitHubIcon.astro";
 import InstagramIcon from "../components/InstagramIcon.astro";
 import LinkedInIcon from "../components/LinkedInIcon.astro";
 import TwitterIcon from "../components/TwitterIcon.astro";
-import ResumeIcon from "../components/ResumeIcon.astro"
 const description = "Keevan is a software engineer. Alum at Allstate, Microsoft, and GitHub."
 const title = "Keevan Dance - Software Engineer"
 ---
@@ -23,25 +22,32 @@ const title = "Keevan Dance - Software Engineer"
 		<meta name="theme-color" content="#000000" />
 	</head>
 	<body class="h-full w-full">
-		<main class="flex h-screen gap-4 flex-col justify-center mx-4 lg:mx-48">
-			<h1 class="text-4xl">Keevan Dance</h1>
-			<h2>Seoul-based software engineer.</h2>
-			<div class="flex flex-col gap-2">
-				<ul>
-					<li>🧑‍💻 Looking for my next opportunity</li>
-					<li>⚽ Playing left-wing in a weekly soccer group with some friends</li>
-					<li>🎧 Attending concerts of my favorite artists</li>
-					<li>☕ Studying Korean at my favorite coffee shops</li>
-				</ul>
-				<ul class="flex gap-4 pt-4">
-					<li><ResumeIcon /></li>
-					<li><EmailIcon /></li>
-					<li><GitHubIcon /></li>
-					<li><InstagramIcon /></li>
-					<li><TwitterIcon /></li>
-					<li><LinkedInIcon /></li>
-				</ul>
+		<main class="flex h-screen gap-4 flex-col items-center justify-center mx-4 lg:mx-32">
+			<div class="flex flex-col justify-center flex-1 gap-2">
+				<h1 class="text-4xl text-center">Keevan Dance</h1>
+				<h2 class="text-center">Seoul-based software engineer.</h2>
+				<div class="flex flex-col gap-2 px-8 mt-8">
+					<ul class="text-center flex flex-col gap-2">
+						<li>🧑‍💻 Looking for my next opportunity 🧑‍💻</li>
+						<li>⚽ Playing in a weekly 조기 축구 team with friends ⚽</li>
+						<li>🎧 Attending concerts of my favorite artists 🎧</li>
+						<li>☕ Studying Korean at my favorite coffee shops ☕</li>
+					</ul>
+					<ul class="flex justify-center gap-4 pt-4 mt-8">
+						<li><EmailIcon /></li>
+						<li><GitHubIcon /></li>
+						<li><InstagramIcon /></li>
+						<li><TwitterIcon /></li>
+						<li><LinkedInIcon /></li>
+					</ul>
+				</div>
 			</div>
+			<nav>
+				<ul class="flex flex-row justify-center gap-4 pb-12">
+					<li><a class="nav-item" href="/resume">Resume</a></li>
+					<li><a class="nav-item" href="/posts">Writings</a></li>
+				</ul>
+			</nav>
 		</main>
 	</body>
 </html>
