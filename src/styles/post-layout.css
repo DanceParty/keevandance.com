@@ -1,0 +1,93 @@
+html {
+  width: 100%;
+  background-image: linear-gradient(45deg, #1e293b, #0f172a);
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+}
+
+#author {
+  @apply text-lg;
+  @apply mt-4;
+}
+
+section :global(#published) {
+  @apply text-lg;
+  @apply mt-4;
+}
+
+h1 {
+  @apply text-4xl;
+  @apply font-medium;
+}
+
+h2 {
+  @apply text-3xl;
+  @apply font-bold;
+  @apply text-fuchsia-400;
+  @apply mt-16;
+  @apply mb-10;
+}
+
+h3 {
+  @apply text-2xl;
+  @apply font-medium;
+}
+
+p {
+  @apply text-lg;
+  @apply mb-6;
+  @apply font-medium;
+}
+
+nav > a {
+  @apply font-medium;
+  @apply text-base;
+  @apply text-white;
+  @apply transition;
+  @apply ease-in-out;
+  box-shadow: 0px 0px 0px #e879f9;
+  &:hover {
+    @apply text-fuchsia-400;
+    box-shadow: 0px 2px 0px #e879f9;
+  }
+}
+
+a {
+  @apply text-lg;
+  @apply font-medium;
+  @apply text-blue-400;
+  @apply transition;
+  @apply ease-in-out;
+  box-shadow: 0px 0px 0px #60a5fa;
+  &:hover {
+    box-shadow: 0px 2px 0px #60a5fa;
+  }
+}
+
+img {
+  @apply mb-6;
+}
+
+ul {
+  @apply list-disc;
+  @apply pl-12;
+}
+
+li {
+  @apply mb-6;
+  @apply text-lg;
+  @apply font-bold;
+}
+
+hr {
+  @apply mb-6;
+}
+
+.posts > a {
+  text-decoration: none;
+  box-shadow: 0 0 0;
+  &:hover {
+    box-shadow: 0 0 0;
+  }
+}
