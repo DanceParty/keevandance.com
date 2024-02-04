@@ -7,66 +7,30 @@
     font-family: "Geist Sans";
     src: url("/GeistVariableVF.woff2");
   }
-  @font-face {
-    font-family: "Nanum Myeongjo", serif;
-    src: url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
-  }
+
   * {
-    margin: 0px;
+    margin: 0;
+  }
+
+  body {
+    line-height: 1.5;
     -webkit-font-smoothing: antialiased;
   }
-  html {
-    font-family: "Nanum Myeongjo", serif;
-    width: 100%;
-    background-image: linear-gradient(45deg, #1e293b, #0f172a);
-    background-size: cover;
-    background-attachment: fixed;
-    color: white;
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
   }
-  h1 {
-    font-family: "Geist Sans";
-    font-weight: 600;
-    font-size: 36px;
-  }
-  h2 {
-    font-weight: 500;
-    font-size: 24px;
-    @apply text-fuchsia-400;
-    @apply font-bold;
-  }
-  li {
-    font-size: 20px;
-    @apply font-semibold;
-    color: #d7d7d7;
-  }
-  a {
-    @apply font-semibold;
-    @apply transition;
-    @apply ease-in-out;
-  }
-  a:hover {
-    @apply text-fuchsia-400;
-  }
-  a.back {
-    font-family: "Geist Sans";
-  }
-  a.nav-item {
-    @apply transition;
-    @apply ease-in-out;
-    box-shadow: 0px 0px 0px #e879f9;
-    &:hover {
-      box-shadow: 0px 2px 0px #e879f9;
-    }
-  }
-  p {
-    @apply pt-4;
-    font-family: "Geist Sans";
-    font-size: 16px;
-    @apply font-light;
-    color: #d7d7d7;
-  }
-  h3 {
-    @apply pt-4;
-    @apply font-bold;
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
   }
 }

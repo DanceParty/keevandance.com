@@ -1,53 +1,51 @@
 ---
-import "../styles/global.css";
-import EmailIcon from "../components/EmailIcon.astro";
-import GitHubIcon from "../components/GitHubIcon.astro";
-import InstagramIcon from "../components/InstagramIcon.astro";
-import LinkedInIcon from "../components/LinkedInIcon.astro";
-import TwitterIcon from "../components/TwitterIcon.astro";
+import PageLayout from '../layouts/page-layout.astro';
+import { Image } from 'astro:assets';
+import profilepic from "../public/profile.png";
 const description = "Keevan is a software engineer. Alum at Allstate, Microsoft, and GitHub."
 const title = "Keevan Dance - Software Engineer"
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-		<link rel="icon" href="/favicon.svg" />
-		<meta name="description" content={description} />
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={description} />
-		<title>{title}</title>
-		<meta name="theme-color" content="#000000" />
-	</head>
-	<body class="h-full w-full">
-		<main class="flex h-screen gap-4 flex-col items-center justify-center mx-4 lg:mx-32">
-			<div class="flex flex-col justify-center flex-1 gap-2">
-				<h1 class="text-4xl text-center">Keevan Dance</h1>
-				<h2 class="text-center">Seoul-based software engineer.</h2>
-				<div class="flex flex-col gap-2 px-8 mt-8">
-					<ul class="text-center flex flex-col gap-2">
-						<li>🧑‍💻 Looking for my next opportunity 🧑‍💻</li>
-						<li>⚽ Playing in a weekly 조기 축구 team with friends ⚽</li>
-						<li>🎧 Attending concerts of my favorite artists 🎧</li>
-						<li>☕ Studying Korean at my favorite coffee shops ☕</li>
-					</ul>
-					<ul class="flex justify-center gap-4 pt-4 mt-8">
-						<li><EmailIcon /></li>
-						<li><GitHubIcon /></li>
-						<li><InstagramIcon /></li>
-						<li><TwitterIcon /></li>
-						<li><LinkedInIcon /></li>
-					</ul>
-				</div>
-			</div>
-			<nav>
-				<ul class="flex flex-row justify-center gap-4 pb-12">
-					<li><a class="nav-item" href="/resume">Resume</a></li>
-					<li><a class="nav-item" href="/posts">Writings</a></li>
-				</ul>
-			</nav>
-		</main>
-	</body>
-</html>
+<PageLayout title={title} description={description}>
+    <div class="flex gap-4">
+        <Image src={profilepic} alt="profile picture" class="rounded-full max-w-[48px]" />
+        <div class="flex flex-col">
+            <h1 class="text-neutral-50 font-medium text-base">Keevan Dance</h1>
+            <h2 class="text-cyan-200 font-normal text-base">Software Engineer</h2>
+        </div>
+    </div>
+    <section class="mt-9">
+        <p class="text-neutral-50 opacity-75 font-normal text-base tracking-wide">
+            I’m currently looking for my next opportunity. I have worked on pushing accessibility and performance on teams at Microsoft and worked as part of a backend re-architecture during my time at GitHub.
+        </p>
+        <p class="mt-6 text-neutral-50 opacity-75 font-normal text-base tracking-wide">
+            If you are interested in working with me, then <a class="underline transition ease-in-out hover:text-cyan-200 hover:opacity-100" href="mailto:keevandance+site@gmail.com">please get in touch</a>.
+        </p>
+    </section>
+    <section class="mt-9">
+        <h3 class="text-neutral-50 font-medium text-base">Work</h3>
+        <ol class="mt-4 grid grid-cols-4 gap-3">
+            <li class="text-neutral-50 font-normal text-base grid col-span-3 grid-cols-4"><span class="opacity-50 col-span-1">2022 - 2023</span><span class="opacity-75 col-span-3">GitHub Actions Policy</span></li>
+            <li class="text-neutral-50 font-normal text-base grid col-span-3 grid-cols-4"><span class="opacity-50 col-span-1">2020 - 2021</span><span class="opacity-75 col-span-3">GitHub Billing</span></li>
+            <li class="text-neutral-50 font-normal text-base grid col-span-3 grid-cols-4"><span class="opacity-50 col-span-1">2019 - 2020</span><span class="opacity-75 col-span-3">Microsoft App Center</span></li>
+            <li class="text-neutral-50 font-normal text-base grid col-span-3 grid-cols-4"><span class="opacity-50 col-span-1">2018 - 2019</span><span class="opacity-75 col-span-3">Allstate Insurance</span></li>
+            <li class="text-neutral-50 font-normal text-base grid col-span-3 grid-cols-4"><span class="opacity-50 col-span-1">2016 - 2018</span><span class="opacity-75 col-span-3">CORE Construction</span></li>
+        </ol>
+    </section>
+    <section class="mt-9">
+        <h3 class="text-neutral-50 font-medium text-base">Projects</h3>
+        <ul class="mt-4 grid grid-cols-4 gap-3">
+            <li class="text-neutral-50 font-normal text-base grid col-span-3 grid-cols-4"><span class="opacity-75 col-span-1"><a class="underline transition ease-in-out hover:text-cyan-200 hover:opacity-100" href="https://banktree.app/">banktree</a></span><span class="opacity-50 col-span-3">Personal budgeting application</span></li>
+            <li class="text-neutral-50 font-normal text-base grid col-span-3 grid-cols-4"><span class="opacity-75 col-span-1"><a class="underline transition ease-in-out hover:text-cyan-200 hover:opacity-100" href="https://github.com/danceparty/sparkle">sparkle</a></span><span class="opacity-50 col-span-3">Multiplayer dice game (based on Farkle)</span></li>
+        </ul>
+    </section>
+    <section class="mt-9">
+        <h3 class="text-neutral-50 font-medium text-base">Hobbies</h3>
+        <ul class="mt-4 flex flex-col gap-3">
+            <li class="text-neutral-50 font-normal text-base opacity-75"><a class="underline transition ease-in-out hover:text-cyan-200 hover:opacity-100" href="/music">music</a></li>
+            <li class="text-neutral-50 font-normal text-base opacity-75"><a class="underline transition ease-in-out hover:text-cyan-200 hover:opacity-100" href="/soccer">soccer</a></li>
+            <!-- <li class="text-neutral-50 font-normal text-base opacity-75"><a class="underline transition ease-in-out hover:text-cyan-200 hover:opacity-100" href="/gaming">gaming</a></li> -->
+            <!-- <li class="text-neutral-50 font-normal text-base opacity-75"><a class="underline transition ease-in-out hover:text-cyan-200 hover:opacity-100" href="/photography">photography</a></li> -->
+        </ul>
+    </section>
+</PageLayout>

@@ -1,0 +1,27 @@
+---
+import "../styles/global.css"
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.svg" />
+    <meta name="description" content="{description}" />
+    <meta property="og:title" content="{title}" />
+    <meta property="og:description" content="{description}" />
+    <title>{title}</title>
+    <meta name="theme-color" content="#000000" />
+  </head>
+  <body class="h-full flex flex-col justify-between gap-12 bg-neutral-900 max-w-prose m-auto">
+    <main class="py-32">
+      <slot />
+    </main>
+    <footer class="h-16 flex flex-col justify-center items-center">
+      <span class="text-center text-neutral-50 font-normal text-sm opacity-50">Made with ❤️ by <a class="underline transition ease-in-out hover:text-cyan-200 hover:opacity-100" href="https://twitter.com/DanceParty_">Keevan</a>.</span>
+      <span class="text-center text-neutral-50 font-normal text-sm opacity-50 mt-1">Site design inspired by <a class="underline transition ease-in-out hover:text-cyan-200 hover:opacity-100" href="https://twitter.com/Gavmn">Gavin Nelson</a>.</span>
+    </footer>
+  </body>
+</html>
