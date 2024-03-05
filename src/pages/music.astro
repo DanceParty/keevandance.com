@@ -1,40 +1,70 @@
 ---
-import PageLayout from '../layouts/page-layout.astro';
-import { Image } from 'astro:assets';
-import icedancer from "../public/music/dec-2023/icedancer.webp"
-import timelapse from "../public/music/dec-2023/time-lapse.webp"
-import zachBryan from "../public/music/jan-2024/zach-bryan.webp"
-import keroOne from "../public/music/jan-2024/kero-one.webp"
-const description = "Keevan is a software engineer. Alum at Allstate, Microsoft, and GitHub."
-const title = "Keevan Dance - Music"
+import PageLayout from "../layouts/page-layout.astro";
+import { Image } from "astro:assets";
+import icedancer from "../public/music/dec-2023/icedancer.webp";
+import timelapse from "../public/music/dec-2023/time-lapse.webp";
+
+import zachBryan from "../public/music/jan-2024/zach-bryan.webp";
+import keroOne from "../public/music/jan-2024/kero-one.webp";
+
+import yaejiEP2 from "../public/music/feb-2024/yaeji-ep2.webp";
+import seafoodSamAfrosInTheWind from "../public/music/feb-2024/seafoodsam-afrosinthewind.webp";
+
+const description = "Keevan is a software engineer. Alum at Allstate, Microsoft, and GitHub.";
+const title = "Keevan Dance - Music";
 ---
 
 <PageLayout title={title} description={description}>
-  <a href="/" class="text-neutral-50 font-normal text-sm opacity-50">&#8592;home</a>
-  <h1 class="text-neutral-50 font-medium text-base mt-3">Music</h1>
-  <h2 class="text-cyan-200 font-normal text-base">What I'm listening to</h2>
-  <section class="mt-9">
-    <h3 class="text-neutral-50 font-medium text-base">January 2024</h3>
-    <div class="w-full grid grid-cols-2 justify-items-center gap-2 mt-4">
-      <div class="flex flex-col">
-        <Image src={zachBryan} alt="Zach Bryan - Zach Bryan" class="max-w-60 rounded-sm" />
-        <span class="text-center text-neutral-50 font-normal text-sm opacity-75 mt-1">Zach Bryan - Zach Bryan</span>
-      </div>
-      <div class="flex flex-col">
-        <Image src={keroOne} alt="Kero One - Windmills of the Soul" class="max-w-60 rounded-sm" />
-        <span class="text-center text-neutral-50 font-normal text-sm opacity-75 mt-1">Kero One - Windmills of the Soul</span>
-      </div>
-    </div>
-    <h3 class="text-neutral-50 font-medium text-base mt-9">December 2023</h3>
-    <div class="w-full grid grid-cols-2 justify-items-center gap-2 mt-4">
-      <div class="flex flex-col">
-        <Image src={icedancer} alt="Bladee - Icedancer" class="max-w-60 rounded-sm" />
-        <span class="text-center text-neutral-50 font-normal text-sm opacity-75 mt-1">Bladee - Icedancer</span>
-      </div>
-      <div class="flex flex-col">
-        <Image src={timelapse} alt="Yukika - Time-Lapse" class="max-w-60 rounded-sm" />
-        <span class="text-center text-neutral-50 font-normal text-sm opacity-75 mt-1">Yukika - Time-Lapse</span>
-      </div>
-    </div>
-  </section>
+    <a href="/" class="text-sm font-normal text-neutral-50 opacity-50">&#8592;home</a>
+    <h1 class="mt-3 text-base font-medium text-neutral-50">Music</h1>
+    <h2 class="text-base font-normal text-cyan-200">What I'm listening to</h2>
+    <section class="mt-9">
+        <h3 class="text-base font-medium text-neutral-50">February 2024</h3>
+        <div class="mt-4 grid w-full grid-cols-2 justify-items-center gap-2">
+            <div class="flex flex-col">
+                <Image src={yaejiEP2} alt="Yaeji - EP2" class="max-w-60 rounded-sm" />
+                <span class="mt-1 text-center text-sm font-normal text-neutral-50 opacity-75">Yaeji - EP2</span>
+            </div>
+            <div class="flex flex-col">
+                <Image
+                    src={seafoodSamAfrosInTheWind}
+                    alt="Seafood Sam - Afros in the Wind"
+                    class="max-w-60 rounded-sm"
+                />
+                <span class="mt-1 text-center text-sm font-normal text-neutral-50 opacity-75"
+                    >Seafood Sam - Afros in the Wind</span
+                >
+            </div>
+        </div>
+        <h3 class="mt-9 text-base font-medium text-neutral-50">January 2024</h3>
+        <div class="mt-4 grid w-full grid-cols-2 justify-items-center gap-2">
+            <div class="flex flex-col">
+                <Image src={zachBryan} alt="Zach Bryan - Zach Bryan" class="max-w-60 rounded-sm" />
+                <span class="mt-1 text-center text-sm font-normal text-neutral-50 opacity-75"
+                    >Zach Bryan - Zach Bryan</span
+                >
+            </div>
+            <div class="flex flex-col">
+                <Image src={keroOne} alt="Kero One - Windmills of the Soul" class="max-w-60 rounded-sm" />
+                <span class="mt-1 text-center text-sm font-normal text-neutral-50 opacity-75"
+                    >Kero One - Windmills of the Soul</span
+                >
+            </div>
+        </div>
+        <h3 class="mt-9 text-base font-medium text-neutral-50">December 2023</h3>
+        <div class="mt-4 grid w-full grid-cols-2 justify-items-center gap-2">
+            <div class="flex flex-col">
+                <Image src={icedancer} alt="Bladee - Icedancer" class="max-w-60 rounded-sm" />
+                <span class="mt-1 text-center text-sm font-normal text-neutral-50 opacity-75"
+                    >Bladee - Icedancer</span
+                >
+            </div>
+            <div class="flex flex-col">
+                <Image src={timelapse} alt="Yukika - Time-Lapse" class="max-w-60 rounded-sm" />
+                <span class="mt-1 text-center text-sm font-normal text-neutral-50 opacity-75"
+                    >Yukika - Time-Lapse</span
+                >
+            </div>
+        </div>
+    </section>
 </PageLayout>
