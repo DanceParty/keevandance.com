@@ -4,80 +4,71 @@ import { Image } from "astro:assets";
 import profilepic from "../public/profile.png";
 const description = "Keevan is a software engineer. Alum at Allstate, Microsoft, and GitHub.";
 const title = "Keevan Dance - Software Engineer";
+const email = "mailto:keevandance+site@gmail.com";
 ---
 
 <PageLayout title={title} description={description}>
     <div class="flex gap-4">
         <Image src={profilepic} alt="profile picture" class="max-h-[48px] max-w-[48px] rounded-full" />
         <div class="flex flex-col">
-            <h1 class="text-base font-medium text-neutral-50">Keevan Dance</h1>
-            <h2 class="text-base font-normal text-cyan-200">Software Engineer</h2>
+            <h1>Keevan Dance</h1>
+            <h2>Software Engineer</h2>
         </div>
     </div>
-    <section class="mt-9">
-        <p class="text-base font-normal tracking-wide text-neutral-50 opacity-75">
+    <section>
+        <p>
             I’m currently looking for my next opportunity. I have worked on pushing accessibility and performance
             on teams at Microsoft and worked as part of a backend re-architecture during my time at GitHub.
         </p>
-        <p class="mt-6 text-base font-normal tracking-wide text-neutral-50 opacity-75">
-            If you are interested in working with me, then <a
-                class="underline transition ease-in-out hover:text-cyan-200 hover:opacity-100"
-                href="mailto:keevandance+site@gmail.com">please get in touch</a
-            >.
+        <p>
+            If you are interested in working with me, then <a href={email} class="link">please get in touch</a>
         </p>
-    </section>
-    <section class="mt-9">
-        <h3 class="text-base font-medium text-neutral-50">Work</h3>
-        <ol class="mt-4 grid grid-cols-1 gap-3">
-            <li class="grid grid-cols-3 text-base font-normal text-neutral-50 lg:grid-cols-4">
-                <span class="col-span-1 opacity-50">2022 - 2023</span>
-                <span class="col-span-2 opacity-75 lg:col-span-3">GitHub Actions Policy</span>
-            </li>
-            <li class="grid grid-cols-3 text-base font-normal text-neutral-50 lg:grid-cols-4">
-                <span class="col-span-1 opacity-50">2020 - 2021</span>
-                <span class="col-span-2 opacity-75 lg:col-span-3">GitHub Billing</span>
-            </li>
-            <li class="grid grid-cols-3 text-base font-normal text-neutral-50 lg:grid-cols-4">
-                <span class="col-span-1 opacity-50">2019 - 2020</span>
-                <span class="col-span-2 opacity-75 lg:col-span-3">Microsoft App Center</span>
-            </li>
-            <li class="grid grid-cols-3 text-base font-normal text-neutral-50 lg:grid-cols-4">
-                <span class="col-span-1 opacity-50">2018 - 2019</span>
-                <span class="col-span-2 opacity-75 lg:col-span-3">Allstate Insurance</span>
-            </li>
-            <li class="grid grid-cols-3 text-base font-normal text-neutral-50 lg:grid-cols-4">
-                <span class="col-span-1 opacity-50">2016 - 2018</span>
-                <span class="col-span-2 opacity-75 lg:col-span-3">CORE Construction</span>
-            </li>
-        </ol>
-    </section>
-    <section class="mt-9">
-        <h3 class="text-base font-medium text-neutral-50">Projects</h3>
-        <ul class="mt-4 grid grid-cols-1 gap-3">
-            <li class="grid grid-cols-3 text-base font-normal text-neutral-50 lg:grid-cols-4">
-                <a
-                    class="col-span-1 underline opacity-75 transition ease-in-out hover:text-cyan-200 hover:opacity-100"
-                    href="https://banktree.app/">banktree</a
-                >
-                <span class="col-span-2 opacity-50 lg:col-span-3">Personal budgeting</span>
-            </li>
-        </ul>
-    </section>
-    <section class="mt-9">
-        <h3 class="text-base font-medium text-neutral-50">Hobbies</h3>
-        <ul class="mt-4 flex flex-col gap-3">
-            <li class="text-base font-normal text-neutral-50 opacity-75">
-                <a class="underline transition ease-in-out hover:text-cyan-200 hover:opacity-100" href="/music"
-                    >music</a
-                >
-            </li>
-            <li class="text-base font-normal text-neutral-50 opacity-75">
-                <a class="underline transition ease-in-out hover:text-cyan-200 hover:opacity-100" href="/soccer"
-                    >soccer</a
-                >
-            </li>
-            <!-- <li class="text-neutral-50 font-normal text-base opacity-75"><a class="underline transition ease-in-out hover:text-cyan-200 hover:opacity-100" href="/gaming">gaming</a></li> -->
-            <!-- <li class="text-neutral-50 font-normal text-base opacity-75"><a class="underline transition ease-in-out hover:text-cyan-200 hover:opacity-100" href="/photography">photography</a></li> -->
-        </ul>
+        <section>
+            <h3>Work</h3>
+            <ol>
+                <li>
+                    <span class="col-span-1 opacity-50">2022 - 2023</span>
+                    <span class="col-span-2 opacity-75 lg:col-span-3">GitHub Actions Policy</span>
+                </li>
+                <li>
+                    <span class="col-span-1 opacity-50">2020 - 2022</span>
+                    <span class="col-span-2 opacity-75 lg:col-span-3">GitHub Billing</span>
+                </li>
+                <li>
+                    <span class="col-span-1 opacity-50">2019 - 2020</span>
+                    <span class="col-span-2 opacity-75 lg:col-span-3">Microsoft App Center</span>
+                </li>
+                <li>
+                    <span class="col-span-1 opacity-50">2018 - 2019</span>
+                    <span class="col-span-2 opacity-75 lg:col-span-3">Allstate Insurance</span>
+                </li>
+                <li>
+                    <span class="col-span-1 opacity-50">2016 - 2018</span>
+                    <span class="col-span-2 opacity-75 lg:col-span-3">CORE Construction</span>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h3>Projects</h3>
+            <ul>
+                <li>
+                    <a href="https://banktree.app/" class="link col-span-1">banktree</a>
+                    <span class="col-span-2 opacity-50 lg:col-span-3">Personal budgeting</span>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h3>Hobbies</h3>
+            <ul>
+                <li>
+                    <a class="link" href="/music">music</a>
+                </li>
+                <li>
+                    <a class="link" href="/soccer">soccer</a>
+                </li>
+                <!-- <li class="text-neutral-50 font-normal text-base opacity-75"><a class="underline transition ease-in-out hover:text-cyan-200 hover:opacity-100" href="/gaming">gaming</a></li> -->
+                <!-- <li class="text-neutral-50 font-normal text-base opacity-75"><a class="underline transition ease-in-out hover:text-cyan-200 hover:opacity-100" href="/photography">photography</a></li> -->
+            </ul>
+        </section>
     </section>
 </PageLayout>

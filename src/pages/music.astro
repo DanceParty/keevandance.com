@@ -1,6 +1,7 @@
 ---
 import PageLayout from "../layouts/page-layout.astro";
-import { Image } from "astro:assets";
+import Album from "../components/album.astro";
+
 import icedancer from "../public/music/dec-2023/icedancer.webp";
 import timelapse from "../public/music/dec-2023/time-lapse.webp";
 
@@ -15,56 +16,24 @@ const title = "Keevan Dance - Music";
 ---
 
 <PageLayout title={title} description={description}>
-    <a href="/" class="text-sm font-normal text-neutral-50 opacity-50">&#8592;home</a>
-    <h1 class="mt-3 text-base font-medium text-neutral-50">Music</h1>
-    <h2 class="text-base font-normal text-cyan-200">What I'm listening to</h2>
-    <section class="mt-9">
-        <h3 class="text-base font-medium text-neutral-50">February 2024</h3>
+    <a href="/" class="nav">&#8592;home</a>
+    <h1 class="mt-3">Music</h1>
+    <h2>What I'm listening to</h2>
+    <section>
+        <h3>February 2024</h3>
         <div class="mt-4 grid w-full grid-cols-2 justify-items-center gap-2">
-            <div class="flex flex-col">
-                <Image src={yaejiEP2} alt="Yaeji - EP2" class="max-w-60 rounded-sm" />
-                <span class="mt-1 text-center text-sm font-normal text-neutral-50 opacity-75">Yaeji - EP2</span>
-            </div>
-            <div class="flex flex-col">
-                <Image
-                    src={seafoodSamAfrosInTheWind}
-                    alt="Seafood Sam - Afros in the Wind"
-                    class="max-w-60 rounded-sm"
-                />
-                <span class="mt-1 text-center text-sm font-normal text-neutral-50 opacity-75"
-                    >Seafood Sam - Afros in the Wind</span
-                >
-            </div>
+            <Album src={yaejiEP2} caption="Yaeji - EP2" />
+            <Album src={seafoodSamAfrosInTheWind} caption="Seafood Sam - Afros in the Wind" />
         </div>
-        <h3 class="mt-9 text-base font-medium text-neutral-50">January 2024</h3>
+        <h3 class="mt-9">January 2024</h3>
         <div class="mt-4 grid w-full grid-cols-2 justify-items-center gap-2">
-            <div class="flex flex-col">
-                <Image src={zachBryan} alt="Zach Bryan - Zach Bryan" class="max-w-60 rounded-sm" />
-                <span class="mt-1 text-center text-sm font-normal text-neutral-50 opacity-75"
-                    >Zach Bryan - Zach Bryan</span
-                >
-            </div>
-            <div class="flex flex-col">
-                <Image src={keroOne} alt="Kero One - Windmills of the Soul" class="max-w-60 rounded-sm" />
-                <span class="mt-1 text-center text-sm font-normal text-neutral-50 opacity-75"
-                    >Kero One - Windmills of the Soul</span
-                >
-            </div>
+            <Album src={zachBryan} caption="Zach Bryan - Zach Bryan" />
+            <Album src={keroOne} caption="Kero One - Windmills of the Soul" />
         </div>
-        <h3 class="mt-9 text-base font-medium text-neutral-50">December 2023</h3>
+        <h3 class="mt-9">December 2023</h3>
         <div class="mt-4 grid w-full grid-cols-2 justify-items-center gap-2">
-            <div class="flex flex-col">
-                <Image src={icedancer} alt="Bladee - Icedancer" class="max-w-60 rounded-sm" />
-                <span class="mt-1 text-center text-sm font-normal text-neutral-50 opacity-75"
-                    >Bladee - Icedancer</span
-                >
-            </div>
-            <div class="flex flex-col">
-                <Image src={timelapse} alt="Yukika - Time-Lapse" class="max-w-60 rounded-sm" />
-                <span class="mt-1 text-center text-sm font-normal text-neutral-50 opacity-75"
-                    >Yukika - Time-Lapse</span
-                >
-            </div>
+            <Album src={icedancer} caption="Bladee - Icedancer" />
+            <Album src={timelapse} caption="Yukika - Time-Lapse" />
         </div>
     </section>
 </PageLayout>

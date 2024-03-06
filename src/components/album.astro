@@ -1,0 +1,9 @@
+---
+import { Image } from "astro:assets";
+const { src, caption } = Astro.props;
+---
+
+<div class="flex flex-col">
+    <Image class="max-w-60 rounded-sm" src={src} alt={caption} />
+    <span class="mt-1 text-center text-sm font-normal text-neutral-50 opacity-75">{caption}</span>
+</div>

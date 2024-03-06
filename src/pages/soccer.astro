@@ -1,41 +1,44 @@
 ---
-import PageLayout from '../layouts/page-layout.astro';
-import { Image } from 'astro:assets';
-import feb3stats from "../public/soccer/feb_3_stats.jpg"
-import feb3photo from "../public/soccer/feb_3_photo.png"
-const description = "Keevan is a software engineer. Alum at Allstate, Microsoft, and GitHub."
-const title = "Keevan Dance - Soccer"
+import PageLayout from "../layouts/page-layout.astro";
+import { Image } from "astro:assets";
+import feb3stats from "../public/soccer/feb_3_stats.jpg";
+import feb3photo from "../public/soccer/feb_3_photo.png";
+const description = "Keevan is a software engineer. Alum at Allstate, Microsoft, and GitHub.";
+const title = "Keevan Dance - Soccer";
 ---
 
 <PageLayout title={title} description={description}>
-  <a href="/" class="text-neutral-50 font-normal text-sm opacity-50">&#8592;home</a>
-  <h1 class="text-neutral-50 font-medium text-base mt-3">Soccer</h1>
-  <h2 class="text-cyan-200 font-normal text-base">Journal</h2>
-  <article>
-    <p class="mt-9 text-neutral-50 opacity-75 font-normal text-base tracking-wide">
-      I grew up playing soccer my whole life. As a kid, I often went back and forth between city recreational leagues, and what we called "travel"
-      teams. Because my hometown was fairly small, there wasn't a big enough pool of players to support club soccer, so as a club team, we only ever
-      played games by travelling to Phoenix or San Diego, hence the term "travel" team (not sure if this is a common term in other places, but I have
-      heard "club" team a lot). This lasted until around high school where most of the players, myself included, ended up transitioning into high school
-      soccer. 
-    </p>
-    <p class="mt-6 text-neutral-50 opacity-75 font-normal text-base tracking-wide">
-      Around this time, I kind of lost interest in soccer and would eventually quit and not really pick it up again until post-college where I would only play
-      a couple games a year in an adults league with some friends. Fast forward to today, I moved to Korea where a friend invited me to come play on their weekly
-      team. Since then, I have been playing pretty much every Saturday usually around 6AM.
-    </p>
-    <p class="mt-6 text-neutral-50 opacity-75 font-normal text-base tracking-wide">
-      The purpose of this page, is mostly for myself to keep a short little journal of the games that I play with a picture or two attached as well.
-    </p>
-    <section class="mt-9">
-      <h3 class="text-neutral-50 font-medium text-base">Feb 3rd, 2024 (🎈)</h3>
-      <div class="w-full flex flex-col justify-center items-center gap-4 mt-4">
-        <Image src={feb3photo} alt="Soccer field" class="w-full rounded-sm" />
-        <Image src={feb3stats} alt="Apple health stats" width="400" class="rounded-sm" />
-        <p class="mt-3 text-neutral-50 opacity-75 font-normal text-base tracking-wide">
-          Final score: 2-1 (W), I played left-wing 2 quarters and left defense 1 quarter.
+    <a href="/" class="nav">&#8592;home</a>
+    <h1>Soccer</h1>
+    <h2>Journal</h2>
+    <section>
+        <p>
+            I grew up playing soccer my whole life. As a kid, I often went back and forth between city
+            recreational leagues, and what we called "travel" teams. Because my hometown was fairly small, there
+            wasn't a big enough pool of players to support club soccer, so as a club team, we only ever played
+            games by travelling to Phoenix or San Diego, hence the term "travel" team (not sure if this is a
+            common term in other places, but I have heard "club" team a lot). This lasted until around high school
+            where most of the players, myself included, ended up transitioning into high school soccer.
         </p>
-      </div>
+        <p>
+            Around this time, I kind of lost interest in soccer and would eventually quit and not really pick it
+            up again until post-college where I would only play a couple games a year in an adults league with
+            some friends. Fast forward to today, I moved to Korea where a friend invited me to come play on their
+            weekly team. Since then, I have been playing pretty much every Saturday usually around 6AM.
+        </p>
+        <p>
+            The purpose of this page, is mostly for myself to keep a short little journal of the games that I play
+            with a picture or two attached as well.
+        </p>
     </section>
-  </article>
+    <section>
+        <h3>Feb 3rd, 2024 (🎈)</h3>
+        <div class="mt-4 flex w-full flex-col items-center justify-center gap-4">
+            <Image src={feb3photo} alt="Soccer field" class="w-full rounded-sm" />
+            <Image src={feb3stats} alt="Apple health stats" width="400" class="rounded-sm" />
+            <p class="mt-3 text-base font-normal tracking-wide text-neutral-50 opacity-75">
+                Final score: 2-1 (W), I played left-wing 2 quarters and left defense 1 quarter.
+            </p>
+        </div>
+    </section>
 </PageLayout>

@@ -3,34 +3,108 @@
 @tailwind utilities;
 
 @layer base {
-  @font-face {
-    font-family: "Geist Sans";
-    src: url("/GeistVariableVF.woff2");
-  }
+    @font-face {
+        font-family: "Geist Sans";
+        src: url("/GeistVariableVF.woff2");
+    }
 
-  * {
-    margin: 0;
-  }
+    * {
+        margin: 0;
+    }
 
-  body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
+    body {
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+    }
 
-  input,
-  button,
-  textarea,
-  select {
-    font: inherit;
-  }
+    input,
+    button,
+    textarea,
+    select {
+        font: inherit;
+    }
 
-  p,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    overflow-wrap: break-word;
-  }
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        overflow-wrap: break-word;
+    }
+
+    h1 {
+        @apply text-base;
+        @apply font-medium;
+        @apply text-neutral-50;
+    }
+
+    h2 {
+        @apply text-base;
+        @apply font-normal;
+        @apply text-cyan-200;
+    }
+
+    h3 {
+        @apply text-base;
+        @apply font-medium;
+        @apply text-neutral-50;
+    }
+
+    section {
+        @apply mt-9;
+    }
+
+    p {
+        @apply text-base;
+        @apply font-normal;
+        @apply tracking-wide;
+        @apply text-neutral-50;
+        @apply opacity-75;
+
+        &:not(:first-child) {
+            @apply mt-6;
+        }
+    }
+
+    a.link {
+        @apply underline;
+        @apply opacity-75;
+        @apply transition;
+        @apply ease-in-out;
+        @apply hover:text-cyan-200;
+        @apply hover:opacity-100;
+    }
+
+    a.nav {
+        @apply text-sm;
+        @apply font-normal;
+        @apply text-neutral-50;
+        @apply no-underline;
+        @apply opacity-50;
+    }
+
+    ol {
+        @apply mt-4;
+        @apply grid;
+        @apply grid-cols-1;
+        @apply gap-3;
+    }
+
+    ul {
+        @apply mt-4;
+        @apply grid;
+        @apply grid-cols-1;
+        @apply gap-3;
+    }
+
+    li {
+        @apply grid;
+        @apply grid-cols-3;
+        @apply text-base;
+        @apply font-normal;
+        @apply text-neutral-50;
+        @apply lg:grid-cols-4;
+    }
 }
