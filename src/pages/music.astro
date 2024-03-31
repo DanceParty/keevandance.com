@@ -11,6 +11,9 @@ import keroOne from "../public/music/jan-2024/kero-one.webp";
 import yaejiEP2 from "../public/music/feb-2024/yaeji-ep2.webp";
 import seafoodSamAfrosInTheWind from "../public/music/feb-2024/seafoodsam-afrosinthewind.webp";
 
+import bladeeYungLeanPsykos from "../public/music/mar-2024/bladee-lean-psykos.webp";
+import cigarettesAfterSexSelfTitled from "../public/music/mar-2024/cigarettes-after-sex-self-titled.webp";
+
 const description = "Keevan is a software engineer. Alum at Allstate, Microsoft, and GitHub.";
 const title = "Keevan Dance - Music";
 ---
@@ -20,7 +23,12 @@ const title = "Keevan Dance - Music";
     <h1 class="mt-3">Music</h1>
     <h2>What I'm listening to</h2>
     <section>
-        <h3>February 2024</h3>
+        <h3>March 2024</h3>
+        <div class="mt-4 grid w-full grid-cols-2 justify-items-center gap-2">
+            <Album src={bladeeYungLeanPsykos} caption="Bladee & Yung Lean - Psykos" />
+            <Album src={cigarettesAfterSexSelfTitled} caption="Cigarettes After Sex - Self Titled" />
+        </div>
+        <h3 className="mt-9">February 2024</h3>
         <div class="mt-4 grid w-full grid-cols-2 justify-items-center gap-2">
             <Album src={yaejiEP2} caption="Yaeji - EP2" />
             <Album src={seafoodSamAfrosInTheWind} caption="Seafood Sam - Afros in the Wind" />
